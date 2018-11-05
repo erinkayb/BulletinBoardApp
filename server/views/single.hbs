@@ -1,0 +1,11 @@
+<div class="card" style="width: 50%;">
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-subtitle mb-2 text-muted">{{date}}</p>
+    <p class="card-text">{{description}}</p>
+  </div>
+</div>
+<form action="/bulletin/{{id}}?_method=DELETE" method="post">
+  <a href="/bulletin/{{id}}/edit" type="button" name="button" class="btn btn-warning">Edit</a>
+  <button type="submit" class="btn btn-warning">Delete</button>
+</form>
