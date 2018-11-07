@@ -1,11 +1,14 @@
-<form class="form" action="/bulletin" method="post">
-  <div class="form-group">
-    <label for="title">Post title</label>
-    <input type="text" name="title" class='form-control' id="title" placeholder="Post title" value="">
-  </div>
-  <div class="form-group">
-    <label for="description">Post message</label>
-    <textarea type="text" name="description" class='form-control' id="description" placeholder="Post message" value=""></textarea>
-  </div>
-<button type="submit" class="btn btn-success">Post</button>
-</form>
+<div class='contain'>
+  <h1 class='titlenewpost'>Post a new Event</h1>
+  <form class="form" action="/bulletin" method="post">
+    <div class="form-group">
+      <label for="title">Post title</label>
+      <input type="text" name="title" class='form-control' id="title" placeholder="Post title" value="">
+    </div>
+    <div class="form-group">
+      <label for="description">Post message</label>
+      <textarea type="text" name="description" class='form-control' id="description" placeholder="Post message" value=""></textarea>
+    </div>
+  <button type="submit" class="btn newpostbtn">Post</button>
+  </form>
+</div>

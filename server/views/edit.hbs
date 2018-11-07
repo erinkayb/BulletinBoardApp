@@ -1,11 +1,15 @@
-<form class="form" action="/bulletin/{{id}}?_method=PUT" method="post">
-  <div class="form-group">
-    <label for="title">title</label>
-    <input type="text" name="title" class='form-control' id="title" placeholder="Post title" value="{{title}}">
-  </div>
-  <div class="form-group">
-    <label for="description">Body</label>
-    <textarea type="text" name="description" class='form-control' id="description" placeholder="Post message" value="{{description}}"></textarea>
-  </div>
-<button type="submit" class="btn btn-danger">Update</button>
-</form>
+<div class="contain">
+  <h1 class='titlenewpost'>Edit your event</h1>
+  <form class="form" action="/bulletin/{{id}}?_method=PUT" method="post">
+    <div class="form-group">
+      <label for="title">Edit the Title</label>
+      <input type="text" name="title" class='form-control' id="title" placeholder="Post title" value="{{title}}">
+    </div>
+    <div class="form-group">
+      <label for="description">Edit the Body</label>
+      <textarea type="text" name="description" class='form-control' id="description" placeholder="Post message" value="{{description}}"></textarea>
+    </div>
+    <button type="submit" class="btn newpostbtn">Update</button>
+    <button type="button" name="button" class="btn newpostbtn"><a class="editpostbtn" href="/bulletin">Go back</a></button>
+  </form>
+</div>
