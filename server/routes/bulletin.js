@@ -25,6 +25,7 @@ router.get('/:id', (req, res) => {
 function resAndRenderMessage(id, res, viewName) {
   if(typeof id != 'undefined'){
     knex('bulletin')
+      // in the database, select the (where) 'id' is matching id then render the view and message
       .select()
       .where('id', id)
       .first()
@@ -70,9 +71,10 @@ function validateMessageIUR(req, res, callback){
 }
 
 router.post('/', (req, res) => {
+  // makes sure it is a valid message
   validateMessageIUR(req, res, (bulletin) => {
     bulletin.date = new Date();
-    // insert into db
+    // then it inserts into db
     knex('bulletin')
       .insert(bulletin, 'id')
       .then(ids => {

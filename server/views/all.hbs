@@ -8,14 +8,15 @@
 
 
   {{#each bulletin}}
-    <div class="card" style="width: 50%;">
-      <div class="card-body">
-        <a href="/bulletin/{{id}}" class="card-title">{{title}}</a>
-        <p class="card-subtitle mb-2 text-muted">{{date}}</p>
+    <div class="card bg-info" style="width: 50%;">
+        <a href="/bulletin/{{id}}" class="card-header">{{title}}</a>
+        <div class="card-body">
+        <p class="card-subtitle mb-2 text-muted date">{{date}}</p>
+
         <p class="card-text">{{description}}</p>
       </div>
     </div>
 
   {{/each}}
 
-<a type="button" class='btn btn-default' href='/bulletin/new' name="button">Post new Message</a>
+<button type="button" name="button" class="btn newpostbtn buttoncontainer"><a class="editpostbtn" href='/bulletin/new' name="button">Post new Message</a></button>

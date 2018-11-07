@@ -1,11 +1,17 @@
-<div class="card" style="width: 50%;">
-  <div class="card-body">
-    <h5 class="card-title">{{title}}</h5>
-    <p class="card-subtitle mb-2 text-muted">{{date}}</p>
-    <p class="card-text">{{description}}</p>
+<div class="container">
+  <h1 class='titlenewpost'>Event: {{title}}</h1>
+  <div class="card bg-info" style="width: 50%;">
+      <h5 class="card-header">{{title}}</h5>
+      <div class="card-body">
+      <p class="card-subtitle mb-2 text-muted date">{{date}}</p>
+      <p class="card-text">{{description}}</p>
+    </div>
   </div>
+  <div class='buttoncontainer'>
+  <form action="/bulletin/{{id}}?_method=DELETE" method="post">
+    <button type="button" class="btn newpostbtn"><a class="editpostbtn" href="/bulletin/{{id}}/edit" name="button">Edit</a></button>
+    <button type="submit" class="btn newpostbtn">Delete</button>
+    <button type="button" name="button" class="btn newpostbtn"><a class="editpostbtn" href="/bulletin">Go back</a></button>
+  </form>
 </div>
-<form action="/bulletin/{{id}}?_method=DELETE" method="post">
-  <a href="/bulletin/{{id}}/edit" type="button" name="button" class="btn btn-warning">Edit</a>
-  <button type="submit" class="btn btn-warning">Delete</button>
-</form>
+</div>
