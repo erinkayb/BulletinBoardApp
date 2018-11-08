@@ -1,7 +1,7 @@
 
 //title- text
 //description - text
-//done(delete) - boolean
+//delete - boolean
 //date - datetime
 
 exports.up = function(knex, Promise) {
